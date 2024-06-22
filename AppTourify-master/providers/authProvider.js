@@ -12,6 +12,10 @@ function AuthProvider({ children }) {
         loadStorageData();
     }, []);
 
+    useEffect(() => {
+        console.log({ user });
+    }, [user]);
+
     async function loadStorageData() {
         try {
         setLoading(true);
